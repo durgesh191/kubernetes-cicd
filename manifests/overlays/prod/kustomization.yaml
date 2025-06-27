@@ -1,0 +1,11 @@
+namespace: default
+resources:
+  - ../../base
+images:
+  - name: ghcr.io/durgesh191/my-app1
+    newTag: latest
+
+commonAnnotations:
+  argocd-image-updater.argoproj.io/image-list: ghcr.io/durgesh191/my-app1
+  argocd-image-updater.argoproj.io/write-back-method: git
+  argocd-image-updater.argoproj.io/ghcr.io_durgesh191_my-app1.update-strategy: latest  
