@@ -22,5 +22,11 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} -f docker/Dockerfile .Add commentMore actions
-          docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
+          IMAGE_NAME=ghcr.io/durgesh191/kubernetes-cicd
+
+          docker build -t $IMAGE_NAME:latest -f docker/Dockerfile .
+
+          docker tag $IMAGE_NAME:latest $IMAGE_NAME:${{ github.sha }}
+
+          docker push $IMAGE_NAME:latest
+          docker push $IMAGE_NAME:${{ github.sha }}
