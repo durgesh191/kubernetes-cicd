@@ -22,5 +22,5 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          docker build -t ghcr.io/durgesh191/my-app1:latest -f docker/Dockerfile .
-          docker push ghcr.io/durgesh191/my-app1:latest
+          docker build -t ghcr.io/${{ github.repository }}:${{ github.sha }} -f docker/Dockerfile .Add commentMore actions
+          docker push ghcr.io/${{ github.repository }}:${{ github.sha }}
