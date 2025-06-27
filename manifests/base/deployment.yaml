@@ -12,9 +12,10 @@ spec:
       labels:
         app: my-app1
     spec:
+      imagePullSecrets:
+        - name: ghcr-creds   
       containers:
         - name: my-app1
           image: ghcr.io/durgesh191/kubernetes-cicd:latest
           ports:
             - containerPort: 80
-        
