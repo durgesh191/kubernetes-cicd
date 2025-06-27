@@ -16,4 +16,4 @@ spec:
         - name: my-app1
           image: ghcr.io/durgesh191/my-app1:latest
           ports:
-            - comtainerPort: 80
+            - containerPort: 80
