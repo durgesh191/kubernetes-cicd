@@ -2,5 +2,5 @@ resources:
   - ../../base
 
 images:
-  - name: ghcr.io/durgesh191/my-app1
+  - name: ghcr.io/durgesh191/kubernetes-cicd
     newTag: latest
